@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一個 GitHub Pages 網站</title>
+    <title>個人簡介</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>歡迎來到我的網站！</h1>
-    <p>這是我的第一個 GitHub Pages 部署的網站。</p>
+    <div class="card">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+        <h2 class="name">呂冠緯</h2>
+        <p class="bio">哈囉你好嗎</p>
+    </div>
 </body>
 </html>
+/* 設定背景顏色與頁面字型 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 設定卡片樣式 */
+.card {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 15px; /* 圓角效果 */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* 當鼠標懸停時放大 */
+}
+
+/* 設定圖片樣式 */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* 圓形圖片 */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* 設定名字的樣式 */
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 設定簡短介紹的樣式 */
+.bio {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+    margin: 0;
+}
