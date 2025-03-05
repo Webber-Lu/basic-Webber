@@ -36,7 +36,7 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.05); /* 當鼠標懸停時放大 */
+    transform: scale(1.5); /* 當鼠標懸停時放大 */
 }
 
 /* 設定圖片樣式 */
@@ -73,7 +73,7 @@ body {
     position: absolute;
     width: 5px;
     height: 5px;
-    background-color: rgb(89, 35, 225); /* 顏色設定為粉紅色 */
+    background-color: rgb(30, 144, 255); /* 藍色流星 (藍色的RGB值) */
     border-radius: 50%;
     opacity: 0.8;
     animation: fall 2s linear infinite;
@@ -88,3 +88,4 @@ body {
         transform: translateY(100vh) rotate(720deg);
     }
 }
+
