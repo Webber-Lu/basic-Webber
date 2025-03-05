@@ -2,7 +2,7 @@
 const meteorContainer = document.getElementById("meteor-container");
 
 // 設置流星數量
-const numberOfMeteors = 50;
+const numberOfMeteors = 300;
 
 // 創建流星函數
 function createMeteor() {
