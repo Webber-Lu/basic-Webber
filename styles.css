@@ -1,7 +1,7 @@
 /* 設定背景顏色與頁面字型 */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #41416148;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ body {
 
 /* 設定卡片樣式 */
 .card {
-    background-color: white;
+    background-color: rgb(167, 68, 144);
     width: 300px;
     padding: 20px;
     border: 2px solid #ddd;
