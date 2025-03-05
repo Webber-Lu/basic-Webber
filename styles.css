@@ -36,7 +36,7 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.5); /* 當鼠標懸停時放大 */
+    transform: scale(1.05); /* 當鼠標懸停時放大 */
 }
 
 /* 設定圖片樣式 */
@@ -76,17 +76,16 @@ body {
     background-color: rgb(30, 144, 255); /* 藍色流星 */
     border-radius: 50%;
     opacity: 0.8;
-    animation: fall 3s linear infinite;
+    animation: fall 3s linear infinite; /* 流星動畫 */
 }
 
 /* 流星掉落動畫 */
 @keyframes fall {
     0% {
-        transform: translate(-100vw, -100vh) rotate(0deg); /* 起始位置：畫面左上角 */
+        transform: translateX(-100vw) translateY(-100vh) rotate(0deg); /* 起始位置：畫面左上角 */
     }
     100% {
-        transform: translate(100vw, 100vh) rotate(720deg); /* 結束位置：畫面右下角 */
+        transform: translateX(100vw) translateY(100vh) rotate(720deg); /* 結束位置：畫面右下角 */
     }
 }
-
 

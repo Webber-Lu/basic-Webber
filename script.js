@@ -42,4 +42,3 @@ function createMeteor() {
 
 // 每 100 毫秒創建一顆流星
 setInterval(createMeteor, 100);
-
