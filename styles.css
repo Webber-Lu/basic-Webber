@@ -73,19 +73,20 @@ body {
     position: absolute;
     width: 5px;
     height: 5px;
-    background-color: rgb(30, 144, 255); /* 藍色流星 (藍色的RGB值) */
+    background-color: rgb(30, 144, 255); /* 藍色流星 */
     border-radius: 50%;
     opacity: 0.8;
-    animation: fall 2s linear infinite;
+    animation: fall 3s linear infinite;
 }
 
 /* 流星掉落動畫 */
 @keyframes fall {
     0% {
-        transform: translateY(-100vh) rotate(0deg);
+        transform: translate(-100vw, -100vh) rotate(0deg); /* 起始位置：畫面左上角 */
     }
     100% {
-        transform: translateY(100vh) rotate(720deg);
+        transform: translate(100vw, 100vh) rotate(720deg); /* 結束位置：畫面右下角 */
     }
 }
+
 

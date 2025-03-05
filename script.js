@@ -14,7 +14,7 @@ function createMeteor() {
     meteor.style.width = `${size}px`;
     meteor.style.height = `${size}px`;
 
-    // 隨機化流星起始位置
+    // 隨機化流星的起始位置：畫面左上角
     const startX = Math.random() * window.innerWidth; // 水平隨機位置
     const startY = Math.random() * -100; // 垂直隨機位置在螢幕上方
     meteor.style.left = `${startX}px`;
