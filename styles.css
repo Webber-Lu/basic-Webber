@@ -11,8 +11,8 @@ body {
 
 /* 設定卡片樣式 */
 .card {
-    background-color: rgb(167, 68, 144);
-    width: 300px;
+    background-color: rgba(79, 80, 86, 0.685);
+    width: 400px;
     padding: 20px;
     border: 2px solid #ddd;
     border-radius: 15px; /* 圓角效果 */
@@ -27,8 +27,8 @@ body {
 
 /* 設定圖片樣式 */
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%; /* 圓形圖片 */
     object-fit: cover;
     margin-bottom: 20px;
@@ -45,7 +45,7 @@ body {
 /* 設定簡短介紹的樣式 */
 .bio {
     font-size: 14px;
-    color: #777;
+    color: #121212;
     line-height: 1.5;
     margin: 0;
 }
