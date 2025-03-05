@@ -73,7 +73,7 @@ body {
     position: absolute;
     width: 5px;
     height: 5px;
-    background-color: rgb(225, 35, 171); /* 顏色設定為粉紅色 */
+    background-color: rgb(89, 35, 225); /* 顏色設定為粉紅色 */
     border-radius: 50%;
     opacity: 0.8;
     animation: fall 2s linear infinite;
