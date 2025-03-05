@@ -71,7 +71,6 @@ body {
     height: 5px;
     background-color: rgb(225, 35, 171);
     border-radius: 50%;
-    opacity: 0.8;
     animation: fall 2s linear infinite;
 }
 
