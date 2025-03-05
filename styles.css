@@ -64,13 +64,14 @@ body {
     margin: 0;
 }
 
-/* 流星動畫 */
+/* 流星樣式 */
 .meteor {
     position: absolute;
     width: 5px;
     height: 5px;
-    background-color: rgb(225, 35, 171);
+    background-color: rgb(225, 35, 171); /* 顏色設定為粉紅色 */
     border-radius: 50%;
+    opacity: 0.8;
     animation: fall 2s linear infinite;
 }
 

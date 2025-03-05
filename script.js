@@ -6,10 +6,9 @@ const numberOfMeteors = 300;
 
 // 創建流星函數
 function createMeteor() {
-    // 隨機位置和速度
     const meteor = document.createElement("div");
     meteor.classList.add("meteor");
-    
+
     // 隨機化流星大小
     const size = Math.random() * 3 + 2; // 流星大小介於 2px 到 5px 之間
     meteor.style.width = `${size}px`;
@@ -27,7 +26,7 @@ function createMeteor() {
 
     // 隨機化流星的角度
     const rotation = Math.random() * 360;
-    meteor.style.animation = `fall ${duration}s linear infinite`;
+    meteor.style.transform = `rotate(${rotation}deg)`; // 隨機旋轉角度
 
     // 加入流星到容器中
     meteorContainer.appendChild(meteor);
@@ -40,3 +39,4 @@ function createMeteor() {
 
 // 每 100 毫秒創建一顆流星
 setInterval(createMeteor, 100);
+
