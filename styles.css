@@ -8,17 +8,37 @@ body {
     height: 100vh;
     margin: 0;
     position: relative; /* 讓背景元素疊加在這個容器內 */
-    overflow: hidden; /* 隱藏超出範圍的流星 */
+    overflow: hidden; /* 隱藏超出範圍的雨滴 */
 }
 
-/* 流星容器 */
-#meteor-container {
+/* 設定下雨容器 */
+#rain-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* 流星不會影響到頁面上的點擊操作 */
+    pointer-events: none; /* 雨滴不會影響到頁面上的點擊操作 */
+}
+
+/* 雨滴樣式 */
+.rain-drop {
+    position: absolute;
+    width: 2px; /* 雨滴寬度 */
+    height: 20px; /* 雨滴長度 */
+    background-color: rgba(0, 0, 255, 0.5); /* 藍色雨滴 */
+    opacity: 0.5;
+    animation: fall 2s linear infinite; /* 下落動畫 */
+}
+
+/* 雨滴掉落動畫 */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh); /* 從畫面上方開始 */
+    }
+    100% {
+        transform: translateY(100vh); /* 掉落到底部 */
+    }
 }
 
 /* 設定卡片樣式 */
@@ -32,7 +52,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     position: relative;
-    z-index: 2; /* 確保卡片在流星之上 */
+    z-index: 2; /* 確保卡片在雨滴之上 */
 }
 
 .card:hover {
@@ -66,25 +86,4 @@ body {
     margin: 0;
     position: relative; /* 設置為相對定位 */
     top: -10px; /* 向上移動簡短介紹 */
-}
-
-/* 流星樣式 */
-.meteor {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: rgb(30, 144, 255); /* 藍色流星 */
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: fall 3s linear infinite; /* 流星動畫 */
-}
-
-/* 流星掉落動畫 */
-@keyframes fall {
-    0% {
-        transform: translateX(-100vw) translateY(-100vh) rotate(0deg); /* 起始位置：畫面左上角 */
-    }
-    100% {
-        transform: translateX(100vw) translateY(100vh) rotate(720deg); /* 結束位置：畫面右下角 */
-    }
 }

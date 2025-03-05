@@ -1,44 +1,30 @@
-// 獲取流星容器
-const meteorContainer = document.getElementById("meteor-container");
+// 獲取下雨容器
+const rainContainer = document.getElementById("rain-container");
 
-// 設置流星數量
-const numberOfMeteors = 300;
+// 設置雨滴數量
+const numberOfRaindrops = 300;
 
-// 創建流星函數
-function createMeteor() {
-    const meteor = document.createElement("div");
-    meteor.classList.add("meteor");
+// 創建雨滴函數
+function createRaindrop() {
+    const raindrop = document.createElement("div");
+    raindrop.classList.add("rain-drop");
 
-    // 隨機化流星大小
-    const size = Math.random() * 3 + 2; // 流星大小介於 2px 到 5px 之間
-    meteor.style.width = `${size}px`;
-    meteor.style.height = `${size}px`;
-
-    // 隨機化流星的起始位置：畫面左上角
+    // 隨機化雨滴的位置
     const startX = Math.random() * window.innerWidth; // 水平隨機位置
-    const startY = Math.random() * -100; // 垂直隨機位置在螢幕上方
-    meteor.style.left = `${startX}px`;
-    meteor.style.top = `${startY}px`;
+    raindrop.style.left = `${startX}px`;
 
-    // 隨機化流星掉落速度
-    const duration = Math.random() * 3 + 2; // 流星的動畫時間介於 2 到 5 秒之間
-    meteor.style.animationDuration = `${duration}s`;
+    // 隨機化雨滴的掉落時間，讓每顆雨滴掉落的速度不同
+    const duration = Math.random() * 2 + 2; // 雨滴掉落時間介於 2 到 4 秒之間
+    raindrop.style.animationDuration = `${duration}s`;
 
-    // 隨機化流星的角度
-    const rotation = Math.random() * 360;
-    meteor.style.transform = `rotate(${rotation}deg)`; // 隨機旋轉角度
+    // 將雨滴添加到容器中
+    rainContainer.appendChild(raindrop);
 
-    // 顯式設定流星顏色為藍色
-    meteor.style.backgroundColor = "rgb(30, 144, 255)"; // 設定顏色為藍色
-
-    // 加入流星到容器中
-    meteorContainer.appendChild(meteor);
-
-    // 移除流星以避免不必要的元素堆積
+    // 移除雨滴以避免不必要的元素堆積
     setTimeout(() => {
-        meteor.remove();
-    }, duration * 1000); // 等到動畫結束後將流星移除
+        raindrop.remove();
+    }, duration * 1000); // 等到動畫結束後將雨滴移除
 }
 
-// 每 100 毫秒創建一顆流星
-setInterval(createMeteor, 100);
+// 每 100 毫秒創建一顆雨滴
+setInterval(createRaindrop, 100);
