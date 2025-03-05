@@ -28,6 +28,9 @@ function createMeteor() {
     const rotation = Math.random() * 360;
     meteor.style.transform = `rotate(${rotation}deg)`; // 隨機旋轉角度
 
+    // 顯式設定流星顏色為藍色
+    meteor.style.backgroundColor = "rgb(30, 144, 255)"; // 設定顏色為藍色
+
     // 加入流星到容器中
     meteorContainer.appendChild(meteor);
 
