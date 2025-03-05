@@ -56,7 +56,7 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.05); /* 當鼠標懸停時放大 */
+    transform: scale(1.5); /* 當鼠標懸停時放大 */
 }
 
 /* 設定圖片樣式 */
